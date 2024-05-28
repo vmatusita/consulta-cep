@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+
+.button {
+    @apply bg-button px-4 py-2 rounded-md hover:bg-text hover:text-button transition-colors duration-300 ease-in-out;
+}
+
+.input {
+    @apply bg-input px-4 py-2 rounded-md;
+}
+
+.dialog {
+    @apply hidden bg-background text-text fixed inset-0 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 px-5 py-8 flex flex-col items-center justify-center space-y-4 rounded-xl w-9/12;
+}
+

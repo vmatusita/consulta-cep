@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="font-reddit-mono bg-background text-text flex flex-col justify-center items-center">
+    <div class="fixed inset-0 backdrop-brightness-50 z-10 rounded-md hidden" id="backdrop"></div>
+    <header class="bg-input w-full text-center p-4 text-3xl tracking-wider font-bold">
+        <h1>Busca Cep</h1>
+    </header>
+    <main class="m-5 space-y-5 w-full flex flex-col justify-center items-center">
+        <form class="space-x-2" action="">
+            <label for="cep">Digite um CEP:</label>
+            <input class="input" type="text" id="input-cep" name="cep" maxlength="9" placeholder="ex: 12345-678" required>
+            <button class="button" id="submit">Buscar</button>
+        </form>
+        <div class="border border-b-1 w-11/12"></div>
+        <table class="w-full flex justify-center">
+            <tr class="bg-button rounded-md">
+                <td class="px-5 py-2 rounded-tl-md">Logradouro</td>
+                <td class="px-5 py-2">Bairro</td>
+                <td class="px-5 py-2">Localidade</td>
+                <td class="px-5 py-2">UF</td>
+                <td class="px-5 py-2">CEP</td>
+                <td class="px-5 py-2 rounded-tr-md">Complemento</td>
+            </tr>
+            <tr class="border-b-2 border-collapse border-text">
+                <td class="px-5 py-1.5">Rua Itajubá</td>
+                <td class="px-5 py-1.5">Portão</td>
+                <td class="px-5 py-1.5">Curitiba</td>
+                <td class="px-5 py-1.5">PR</td>
+                <td class="px-5 py-1.5">80000-000</td>
+                <td class="px-5 py-1.5">Bl.5 Ap.502</td>
+            </tr>
+        </table>
+        <dialog class="dialog">
+            <table class="w-full flex justify-center">
+                <tr class="bg-button">
+                    <td class="px-5 py-2 rounded-tl-md">Logradouro</td>
+                    <td class="px-5 py-2">Bairro</td>
+                    <td class="px-5 py-2">Localidade</td>
+                    <td class="px-5 py-2">UF</td>
+                    <td class="px-5 py-2">CEP</td>
+                    <td class="px-5 py-2 rounded-tr-md">Complemento</td>
+                </tr>
+                <tr>
+                    <td class="px-5 py-1.5" id="logradouro">Rua Itajubá</td>
+                    <td class="px-5 py-1.5" id="bairro">Portão</td>
+                    <td class="px-5 py-1.5" id="localidade">Curitiba</td>
+                    <td class="px-5 py-1.5" id="uf">PR</td>
+                    <td class="px-5 py-1.5" id="cep">80000-000</td>
+                    <td class="px-5 py-1.5">
+                        <input class="input" type="text" id="complemento" placeholder="ex: Bl.4 Ap.407">
+                    </td>
+                </tr>
+            </table>
+            <div class="mt-3 space-x-10">
+                <button class="button" id="guardar">Guardar CEP</button>
+                <button class="button" id="novo">Nova Busca</button>
+            </div>    
+        </dialog>
+    </main>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
